@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode - Warm coffee/copper tones */
+    --background: 30 35% 96%;
+    --foreground: 25 45% 12%;
+
+    --card: 30 30% 94%;
+    --card-foreground: 25 45% 12%;
+
+    --popover: 30 30% 94%;
+    --popover-foreground: 25 45% 12%;
+
+    --primary: 14 65% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 25% 88%;
+    --secondary-foreground: 25 35% 20%;
+
+    --muted: 30 20% 90%;
+    --muted-foreground: 25 30% 35%;
+
+    --accent: 14 65% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 14 65% 65%;
+
+    /* EmoPalAI specific colors - Copper/warm tones */
+    --warm-glow: 14 65% 65%;
+    --warm-glow-hover: 14 70% 60%;
+    --warm-subtle: 30 20% 90%;
+    --warm-text-secondary: 25 35% 35%;
+    
+    /* Gradients and effects - Rich velvety light gradients */
+    --gradient-primary: radial-gradient(ellipse at top left, 
+      hsl(45 50% 98%) 0%, 
+      hsl(35 45% 95%) 15%, 
+      hsl(30 40% 92%) 30%, 
+      hsl(25 35% 90%) 45%, 
+      hsl(20 45% 93%) 60%, 
+      hsl(15 55% 96%) 75%, 
+      hsl(10 60% 97%) 90%, 
+      hsl(14 65% 98%) 100%),
+    linear-gradient(135deg, 
+      hsl(35 40% 97%) 0%, 
+      hsl(30 35% 94%) 25%, 
+      hsl(25 30% 91%) 50%, 
+      hsl(20 40% 93%) 75%, 
+      hsl(14 50% 95%) 100%);
+    --gradient-card: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.25) 0%, 
+      rgba(255, 255, 255, 0.15) 50%, 
+      rgba(255, 255, 255, 0.08) 100%);
+    --gradient-button: linear-gradient(135deg, 
+      rgba(216, 142, 103, 0.9) 0%, 
+      rgba(211, 129, 87, 0.95) 50%, 
+      rgba(207, 118, 73, 1) 100%);
+    --shadow-warm: 14 65% 65%;
+    --glow-warm: 14 65% 65%;
+    --emboss-light: 1px 1px 3px rgba(0,0,0,0.2), -1px -1px 2px rgba(255,255,255,0.8);
+    --emboss-button: 2px 2px 6px rgba(0,0,0,0.15), -1px -1px 3px rgba(255,255,255,0.9), inset 1px 1px 2px rgba(255,255,255,0.3);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --glass-blur: blur(16px);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Lighter brown with copper gradient visible */
+    --background: 25 35% 25%;
+    --foreground: 30 35% 96%;
+
+    --card: 25 30% 30%;
+    --card-foreground: 30 35% 96%;
+
+    --popover: 25 30% 30%;
+    --popover-foreground: 30 35% 96%;
+
+    --primary: 14 75% 60%;
+    --primary-foreground: 25 35% 25%;
+
+    --secondary: 25 25% 35%;
+    --secondary-foreground: 30 35% 96%;
+
+    --muted: 25 20% 32%;
+    --muted-foreground: 30 25% 85%;
+
+    --accent: 14 75% 60%;
+    --accent-foreground: 25 35% 25%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 25% 35%;
+    --input: 25 25% 35%;
+    --ring: 14 75% 60%;
+
+    /* EmoPalAI specific colors - Copper tones visible in dark */
+    --warm-glow: 14 75% 60%;
+    --warm-glow-hover: 14 80% 65%;
+    --warm-subtle: 25 20% 32%;
+    --warm-text-secondary: 30 25% 85%;
+    
+    /* Gradients and effects - Rich velvety dark gradients */
+    --gradient-primary: radial-gradient(ellipse at top left, 
+      hsl(25 35% 15%) 0%, 
+      hsl(22 40% 20%) 15%, 
+      hsl(20 42% 25%) 30%, 
+      hsl(18 45% 28%) 45%, 
+      hsl(16 48% 32%) 60%, 
+      hsl(14 52% 35%) 75%, 
+      hsl(12 55% 38%) 90%, 
+      hsl(14 58% 40%) 100%),
+    linear-gradient(135deg, 
+      hsl(25 35% 18%) 0%, 
+      hsl(20 40% 25%) 25%, 
+      hsl(18 45% 30%) 50%, 
+      hsl(16 50% 33%) 75%, 
+      hsl(14 55% 35%) 100%);
+    --gradient-card: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.05) 50%, 
+      rgba(255, 255, 255, 0.02) 100%);
+    --gradient-button: linear-gradient(135deg, 
+      rgba(207, 118, 73, 0.9) 0%, 
+      rgba(216, 142, 103, 0.95) 50%, 
+      rgba(223, 156, 116, 1) 100%);
+    --shadow-warm: 14 75% 60%;
+    --glow-warm: 14 75% 60%;
+    --emboss-light: 1px 1px 3px rgba(0,0,0,0.4), -1px -1px 2px rgba(255,255,255,0.1);
+    --emboss-button: 2px 2px 8px rgba(0,0,0,0.3), -1px -1px 4px rgba(255,255,255,0.2), inset 1px 1px 3px rgba(255,255,255,0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --glass-blur: blur(20px);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background: var(--gradient-primary);
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-x: hidden;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2), -0.5px -0.5px 1px rgba(255,255,255,0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: hsl(var(--warm-glow) / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  /* Magical embossed utility classes */
+  .text-embossed {
+    text-shadow: var(--emboss-light);
+  }
+
+  .embossed-button {
+    box-shadow: var(--emboss-button);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .embossed-button:hover {
+    transform: translateY(-0.5px);
+    box-shadow: var(--emboss-button), 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .embossed-button:active {
+    transform: translateY(0px);
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2), inset -1px -1px 2px rgba(255,255,255,0.1);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow), 
+                inset 0 1px 1px rgba(255,255,255,0.3);
+    border: 1px solid var(--glass-border);
+  }
+
+  .floating-glow {
+    animation: floating 12s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px hsl(var(--warm-glow) / 0.2));
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+  }
+
+  /* Text with dynamic contrast */
+  .dynamic-text {
+    color: hsl(var(--foreground));
+    text-shadow: var(--emboss-light);
+    transition: all 0.3s ease;
+  }
+
+  /* Magical glass button */
+  .magical-button {
+    background: var(--gradient-button);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--emboss-button);
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  /* Glass input styling */
+  .glass-input {
+    background: var(--gradient-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* Glass theme toggle */
+  .glass-toggle {
+    background: var(--gradient-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+}
