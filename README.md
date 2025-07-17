@@ -63,7 +63,7 @@ We are looking for:
 - Caregivers who want to shape the future of emotional tech
 - Survivors who want to be seen *as more than patients*
 
-[Sign up for early access → emopalai.com](https://emopal.ai)
+[Sign up for early access → emopal.ai](https://emopal.ai)
 
 ---
 
