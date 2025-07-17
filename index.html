@@ -22,15 +22,24 @@
 
   <!-- Reddit Pixel -->
   <script>
-    !function (w, d, t, s) {
-      w.RA = w.RA || function () { (w.RA.q = w.RA.q || []).push(arguments) };
-      var f = d.getElementsByTagName(t)[0], j = d.createElement(t); j.async = !0; j.src = s;
-      f.parentNode.insertBefore(j, f)
-    }(window, document, 'script', 'https://www.redditstatic.com/ads/pixel.js');
-
-    RA('init', '<YOUR_PIXEL_ID>');
-    RA('track', 'PageVisit');
+    !function (w, d) {
+      if (!w.rdt) {
+        var p = w.rdt = function () {
+          p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments)
+        };
+        p.callQueue = [];
+        var t = d.createElement("script");
+        t.src = "https://www.redditstatic.com/ads/pixel.js";
+        t.async = !0;
+        var s = d.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(t, s)
+      }
+    }(window, document);
+    rdt('init', 'a2_hcheq3wsv4yr');
+    rdt('track', 'PageVisit');
   </script>
+  <!-- End Reddit Pixel -->
+
 </head>
 
 <body>
