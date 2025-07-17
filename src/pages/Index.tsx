@@ -146,7 +146,7 @@ const Index = () => {
                   required
                 />
                 <div className="absolute right-5 top-1/2 -translate-y-1/2 text-xl text-warm-glow pointer-events-none floating-glow">
-                  💌
+
                 </div>
               </div>
 
