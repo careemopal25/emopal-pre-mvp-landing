@@ -36,23 +36,23 @@ const Index = () => {
     <div className="min-h-screen relative">
       <ThemeToggle />
       <ThreeBackground />
-      
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center text-center px-4 py-20">
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-foreground to-warm-glow bg-clip-text text-transparent"
-                  style={{
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.1)'
-                  }}>
-              We hold the bond together — even when cancer tries to break it.
+              style={{
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.1)'
+              }}>
+              We hold the bond together...Even when cancer tries to break it!!
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl dynamic-text mb-12 max-w-3xl mx-auto font-light">
             An emotional OS for families who choose to stay — even when it's hard.
           </p>
-          
+
           <Button
             onClick={scrollToWaitlist}
             size="lg"
@@ -76,11 +76,11 @@ const Index = () => {
               <span className="text-4xl md:text-6xl text-warm-glow absolute -top-4 -left-8 font-light floating-glow">"</span>
               We've seen how caregiving gets mechanical. And how survivors feel invisible.
               <br /><br />
-              EmoPalAI isn't another app. It's a multi-agent OS designed to help you both remember who you are — 
+              EmoPalAI isn't another app. It's a multi-agent OS designed to help you both remember who you are —
               to each other.
               <span className="text-4xl md:text-6xl text-warm-glow absolute -bottom-8 -right-8 font-light floating-glow">"</span>
             </blockquote>
-            
+
             <DyadVisual />
           </SectionCard>
         </div>
@@ -90,20 +90,20 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-16 text-foreground"
-              style={{
-                textShadow: '1px 1px 3px rgba(0,0,0,0.4), -1px -1px 1px rgba(255,255,255,0.1)'
-              }}>
+            style={{
+              textShadow: '1px 1px 3px rgba(0,0,0,0.4), -1px -1px 1px rgba(255,255,255,0.1)'
+            }}>
             Beyond Cancer
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {[
               { title: "Alzheimer's Support", emoji: "🧠" },
               { title: "Diabetes Families", emoji: "💉" },
               { title: "Senior Care", emoji: "👴" }
             ].map((item, index) => (
-              <div key={index} 
-                   className="gradient-card rounded-2xl p-8 embossed-button
+              <div key={index}
+                className="gradient-card rounded-2xl p-8 embossed-button
                               transition-all duration-500 hover:-translate-y-1 
                               relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-warm-glow to-warm-glow-hover 
@@ -122,16 +122,16 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <SectionCard className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground"
-                style={{
-                  textShadow: '1px 1px 3px rgba(0,0,0,0.4), -1px -1px 1px rgba(255,255,255,0.1)'
-                }}>
+              style={{
+                textShadow: '1px 1px 3px rgba(0,0,0,0.4), -1px -1px 1px rgba(255,255,255,0.1)'
+              }}>
               Join the Waitlist
             </h2>
-            
+
             <p className="text-lg md:text-xl dynamic-text mb-12 italic">
               We'll invite you to our very first emotional experience — one moment at a time.
             </p>
-            
+
             <form onSubmit={handleWaitlist} className="max-w-md mx-auto space-y-6">
               <div className="relative">
                 <Input
@@ -149,7 +149,7 @@ const Index = () => {
                   💌
                 </div>
               </div>
-              
+
               <Button
                 type="submit"
                 size="lg"
@@ -169,12 +169,12 @@ const Index = () => {
           <p className="dynamic-text text-sm opacity-80 mb-4">
             EmoPalAI is a project of Sanjeevani AI LLC
           </p>
-          
+
           <div className="flex justify-center gap-8 text-sm">
             {['Privacy', 'Terms', 'Contact'].map((link) => (
-              <a key={link} 
-                 href={`#${link.toLowerCase()}`} 
-                 className="dynamic-text hover:text-warm-glow transition-colors duration-300 text-embossed">
+              <a key={link}
+                href={`#${link.toLowerCase()}`}
+                className="dynamic-text hover:text-warm-glow transition-colors duration-300 text-embossed">
                 {link}
               </a>
             ))}
