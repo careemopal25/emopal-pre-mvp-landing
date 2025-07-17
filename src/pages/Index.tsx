@@ -145,43 +145,43 @@ const Index = () => {
                            placeholder:text-muted-foreground/70 border-none"
                   required
                 />
-                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-xl text-warm-glow pointer-events-none floating-glow">
+                {/* <div className="absolute right-5 top-1/2 -translate-y-1/2 text-xl text-warm-glow pointer-events-none floating-glow">*/}
 
-                </div>
               </div>
+            </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full magical-button embossed-button text-white font-semibold text-lg py-6 
+            <Button
+              type="submit"
+              size="lg"
+              className="w-full magical-button embossed-button text-white font-semibold text-lg py-6 
                            rounded-full text-embossed"
-              >
-                Notify Me First
-              </Button>
-            </form>
-          </SectionCard>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-16 px-4 border-t border-border/50 mt-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="dynamic-text text-sm opacity-80 mb-4">
-            EmoPalAI is a project of Sanjeevani AI LLC
-          </p>
-
-          <div className="flex justify-center gap-8 text-sm">
-            {['Privacy', 'Terms', 'Contact'].map((link) => (
-              <a key={link}
-                href={`#${link.toLowerCase()}`}
-                className="dynamic-text hover:text-warm-glow transition-colors duration-300 text-embossed">
-                {link}
-              </a>
-            ))}
-          </div>
-        </div>
-      </footer>
+            >
+              Notify Me First
+            </Button>
+          </form>
+        </SectionCard>
     </div>
+      </section >
+
+  {/* Footer */ }
+  < footer className = "py-16 px-4 border-t border-border/50 mt-20" >
+    <div className="max-w-6xl mx-auto text-center">
+      <p className="dynamic-text text-sm opacity-80 mb-4">
+        EmoPalAI is a project of Sanjeevani AI LLC
+      </p>
+
+      <div className="flex justify-center gap-8 text-sm">
+        {['Privacy', 'Terms', 'Contact'].map((link) => (
+          <a key={link}
+            href={`#${link.toLowerCase()}`}
+            className="dynamic-text hover:text-warm-glow transition-colors duration-300 text-embossed">
+            {link}
+          </a>
+        ))}
+      </div>
+    </div>
+      </footer >
+    </div >
   );
 };
 
