@@ -63,11 +63,11 @@ We are looking for:
 - Caregivers who want to shape the future of emotional tech
 - Survivors who want to be seen *as more than patients*
 
-[💌 Sign up for early access → emopalai.com](https://emopalai.com)
+[Sign up for early access → emopalai.com](https://emopal.ai)
 
 ---
 
-## 🧬 License
+## License
 
 Proprietary | EmoPalAI (C) Sanjeevani AI LLC 2025  
 *Built with gratitude, pain, and care.*
